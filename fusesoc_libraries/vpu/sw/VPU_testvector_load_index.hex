@@ -1,0 +1,11 @@
+00400093 //00: addi x1, x0, 4 (the amount of elements to load)
+01800193 //04: addi x3, x0, 18
+0000F157 //08: vsetvli x2, x1, e8, m1 set vl to the value stored in x1 (8)
+0201D107 //0c: vle16 v2, x3 load indices into v2
+02000193 //10: addi x3, x0, 20 Data address
+0621D087 //14: vluxei16 v2, x3 load indices into v2
+06020406 //18: Indices
+FEDCBA98 //1c: Indices
+22221111 //20: Data
+66664444 //24: Data
+00000000 //28: Padding 

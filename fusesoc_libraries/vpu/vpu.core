@@ -1,0 +1,38 @@
+CAPI=2:
+
+name : ::vpu:1.0.0
+description: V-extension for RISC-V SERV cores
+
+filesets:
+  core:
+    files:
+      - rtl/vpu_top.v
+      - rtl/vector_ALU.v
+      - rtl/vector_alu_and_decoder.v
+      - rtl/vector_registers.v
+      - rtl/vector_csrs.v
+      - rtl/vector_mem_if.v
+      - rtl/vector_mask_decoder.v
+      - rtl/vector_ALU1_R_decoder.v
+      - rtl/vector_ALU1_R_address_alignment.v
+    file_type : verilogSource
+  
+  verilator_tb: 
+    files:
+      - bench/verilator_tb.c
+    file_type : cSource
+
+targets:
+  default:
+    filesets : [core]
+    toplevel : vpu_top
+
+  verilator_tb:
+    default_tool : verilator
+    filesets : [core,  verilator_tb]
+    tools:
+      verilator:
+        verilator_options:
+          - '--trace'
+          - '-Wall'
+    toplevel : vpu_top

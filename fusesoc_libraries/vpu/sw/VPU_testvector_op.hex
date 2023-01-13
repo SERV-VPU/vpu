@@ -1,0 +1,13 @@
+00400093 //00: addi x1, 4 (the amount of elements to load)
+02800193 //04: addi x3, x0, 28
+02C00213 //08: addi x4, x0, 2C
+00100293 //0C: addi x5, x0, 4
+0000F157 //10: vsetvli x2, x1, e8, m1 set vl to the value stored in x1 (8)
+02018087 //14: vle8 v1, x3
+02020107 //18: vle8 v2, x4
+021132D7 //24: vadd.vi v5, 2, v1
+0212C257 //1C: vadd.vx v4, x5, v1
+021101D7 //20: vadd.vv v3, v2, v1
+11112222 //28: 
+33334444 //2C: 
+00000000

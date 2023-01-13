@@ -1,0 +1,12 @@
+00400093 //00: addi x1, 4 (the amount of elements to load)
+02000193 //04: addi x3, x0, 20
+00400213 //08: addi x4, x0, 4 (stride amount)
+0000F157 //0C: vsetvli x2, x1, e8, m1 set vl to the value stored in x1 (8)
+0201D087 //10: vle16 v1, x3
+02C00193 //14: addi x3, x0, 2C
+0A41D0A7 //18: vse16 v1 (x3)
+00000000 //1C: Padding
+76543210 //20: Data being loaded into vector
+FEDCBA98 //24: Data being loaded into vector
+00000000 //28: Padding(?) idk it doesn't load bytes 0x18 - 0x1B into RAM if there's no zeroes here
+00000000 //2C:
