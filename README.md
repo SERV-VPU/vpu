@@ -5,4 +5,4 @@ The VPU is controbuted by Ren Chen from University of Southampton's Group Design
 The VPU currently supports loads, stores(alignment issue), and addition instructions.  
 
 ## Contact:
-    Ren Chen: rc7g18@soton.ac.uk / chenren76@hotmail.com  
+Ren Chen: rc7g18@soton.ac.uk / chenren76@hotmail.com  
