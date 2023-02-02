@@ -2,7 +2,7 @@
 
 Includes an altered version of the SERV core (https://github.com/olofk/serv)
 
-This repository contains a fusesoc environment with our Vector Processing Unit and a SERV implementation that has been modified to utilise it.
+This repository contains a fusesoc (https://github.com/olofk/fusesoc) environment with our Vector Processing Unit and a SERV implementation that has been modified to utilise it.
 
 Vector extension unit for the SERV, to run SERV with the VPU add "--flag==vpu" in the fusesoc command line.  
 For example:  
